@@ -8,15 +8,15 @@ Welcome to James' Sphinx documentation test!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Overview
 
    Introduction
    test-folder-1/nested_file
    Showcase
 
-Indices and tables
-==================
+.. toctree::
+   :caption: Software
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Software/Atlas/index
+   Software/Fleetview/index
+   Software/Voyager/index

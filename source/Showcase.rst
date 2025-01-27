@@ -3,7 +3,7 @@ RST Elements Showcase
 =====================
 
 Basic Text Formatting
--------------------
+---------------------
 
 This is a paragraph with *italic text* and **bold text**.
 You can also have ``inline code`` or *italics* and **bold**.
@@ -39,7 +39,7 @@ Term 2
     Definition of term 2
 
 Code Blocks
-----------
+-----------
 
 Simple code block using double colon::
 

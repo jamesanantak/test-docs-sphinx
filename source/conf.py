@@ -8,9 +8,19 @@
 
 import os
 import sys
+
+import os
+from dataclasses import asdict
+
+from sphinx.application import Sphinx
+from sphinx.util.docfields import Field
+
+import sphinxawesome_theme
+from sphinxawesome_theme.postprocess import Icons
+
 sys.path.insert(0, os.path.abspath('.'))
 
-project = 'docs-test'
+project = 'Docs Testing'
 copyright = '2025, James Bambridge'
 author = 'James Bambridge'
 release = '1.0.0'
@@ -19,11 +29,15 @@ release = '1.0.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    "sphinxawesome_theme",
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'recommonmark',
     'sphinx_markdown_tables',
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.extlinks",
+    "sphinx_design",
 ]
 
 templates_path = ['_templates']
@@ -34,15 +48,23 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinxawesome_theme'
+
+html_title = project
+html_use_index = False
+html_domain_indices = False  # Don't need module indices
+html_copy_source = False  # Don't need sources
+#html_permalinks_icon = '<span>¶</span>'
+html_permalinks_icon = Icons.permalinks_icon
+
+
 html_static_path = ['_static']
+
 
 # Add theme-specific options
 html_theme_options = {
-    'navigation_depth': 4,
-    'titles_only': False,
-    'display_version': False,
+    "logo_light": "_static/ana-logo-black.png",
+    "logo_dark": "_static/ana-logo-black.png",
 }
 
-# Set the logo
-html_logo = '_static/Full Color Logo w_ Black Letters (Horizontal).png'

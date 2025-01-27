@@ -3,20 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to James' Sphinx documentation test!
-============================================
+Test documentation site
+=======================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Overview
+
+   Introduction
+   Showcase
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Software
 
-   Introduction
-   test-folder-1/nested_file
-   Showcase
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Software/Atlas/index
+   Software/Fleetview/index
+   Software/Voyager/index
