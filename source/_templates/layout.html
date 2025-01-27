@@ -1,0 +1,60 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<style>
+    /* Logo styling */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    
+    .logo-container img {
+        height: 32px;  /* Adjust size as needed */
+        margin-right: 1rem;
+    }
+
+    /* Top navigation bar */
+    .top-nav {
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+        border-bottom: 1px solid #e1e4e5;
+        padding: 0.5rem 0;
+    }
+    
+    /* Top menu items */
+    .top-menu {
+        display: flex;
+        align-items: center;
+    }
+    
+    .top-menu a {
+        color: #404040;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+    }
+    
+    .top-menu a:hover {
+        color: #2980B9;
+    }
+    
+    .top-menu a.active {
+        color: #2980B9;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="top-nav">
+    <div class="logo-container">
+        <img src="{{ pathto('_static/Full Color Logo w_ Black Letters (Horizontal).png', 1) }}" alt="Logo">
+    </div>
+    <div class="top-menu">
+        <a href="{{ pathto('index') }}" {% if pagename == 'index' %}class="active"{% endif %}>Home</a>
+    </div>
+</div>
+{{ super() }}
+{% endblock %}

@@ -1,0 +1,42 @@
+# Version of the Read the Docs configuration file
+version: 2
+
+# Build settings
+build:
+  # Specifies the OS to build documentation on
+  os: ubuntu-22.04
+  tools:
+    # Specify Python version for building docs
+    python: "3.11"
+
+# Sphinx configuration
+sphinx:
+  # Path to your Sphinx configuration file
+  configuration: source/conf.py
+
+# Python configuration
+python:
+  install:
+    # Path to requirements file containing doc dependencies
+    - requirements: source/requirements.txt
+
+# Optional configurations you might want to add:
+# formats:
+#   - pdf
+#   - epub
+
+# submodules:
+#   include: all
+#   recursive: true
+
+# search:
+#   ranking:
+#     api/*: -1
+#     blog/*: 4
+
+# build:
+#   jobs:
+#     pre_build:
+#       - python scripts/pre_build.py
+#     post_build:
+#       - python scripts/post_build.py
