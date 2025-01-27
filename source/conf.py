@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.abspath('.'))
 project = 'Docs Testing'
 copyright = '2025, James Bambridge'
 author = 'James Bambridge'
-release = '1.0.0'
+release = '1.1.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
